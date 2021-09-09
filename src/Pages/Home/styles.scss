@@ -22,14 +22,14 @@
     position: relative;
 
     & a {
-        width: 130px;
+        width: 140px;
         height: 130px;
         background-position: center;
         background-size: cover;
         position: relative;
 
         @media (max-width: $ipad){
-            width: 90px;
+            width: 100px;
             height: 90px;
         }
     }
@@ -37,17 +37,17 @@
     @media (max-width: $smaller-ipad){
         grid-template-columns: 1fr 2fr 1fr;
         grid-template-rows: 2fr 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr;
-        align-items: flex-start;
     }
 }
 
 .main-picture {
     display: flex;
-    width: 60%;
+    width: 55%;
     position: absolute;
 
     @media (max-width: $smaller-ipad){
         width: 100%;
+        padding-bottom: 10px;
         position: relative;
         grid-column: 2;
         grid-row: 1;
@@ -60,12 +60,38 @@
     background-image: url("../../assets/yrden.png");
 
     &:hover {
-        background-image: url("../../assets/yrden-hover.png");  
+        background-image: url("../../assets/yrden-hover.png"); 
+        
+        .hidden-text {
+            bottom: 50px;
+            animation: representation1 2s forwards;
+
+            @keyframes representation1 {
+                0% {
+                    opacity: 0;
+                    transform: translateX(70px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateX(110px);
+                }
+            }
+
+            @media (max-width: $ipad){
+                bottom: 30px;
+            }
+        }
     }
 
     @media (max-width: $smaller-ipad){
         grid-column: 2;
         grid-row: 2;
+
+        &:hover {
+            .hidden-text {
+                animation: none;
+            }
+        }
     }
 }
 
@@ -75,12 +101,49 @@
     background-image: url("../../assets/ard.png");
 
     &:hover {
-        background-image: url("../../assets/ard-hover.png");  
+        background-image: url("../../assets/ard-hover.png");
+        
+        .hidden-text {
+            bottom: 50px;
+            animation: representation2 2s forwards;
+
+            @keyframes representation2 {
+                0% {
+                    opacity: 0;
+                    transform: translateX(70px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateX(120px);
+                }
+            }
+
+            @media (max-width: $ipad){
+                animation: representation6 2s forwards;
+
+                @keyframes representation6 {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(50px);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateY(80px);
+                    }
+                }
+            }
+        }
     }
 
     @media (max-width: $smaller-ipad){
         grid-column: 2;
         grid-row: 3;
+
+        &:hover {
+            .hidden-text {
+                animation: none;
+            }
+        }
     }
 }
 
@@ -90,12 +153,49 @@
     background-image: url("../../assets/igni.png");
 
     &:hover {
-        background-image: url("../../assets/igni-hover.png");  
+        background-image: url("../../assets/igni-hover.png");
+
+        .hidden-text {
+            bottom: 50px;
+            animation: representation3 2s forwards;
+
+            @keyframes representation3 {
+                0% {
+                    opacity: 0;
+                    transform: translateX(-50px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateX(-90px);
+                }
+            }
+
+            @media (max-width: $ipad){
+                animation: representation7 2s forwards;
+
+                @keyframes representation7 {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(50px);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateY(80px);
+                    }
+                }
+            }
+        }  
     }
 
     @media (max-width: $smaller-ipad){
         grid-column: 2;
         grid-row: 6;
+
+        &:hover {
+            .hidden-text {
+                animation: none;
+            }
+        }
     }
 }
 
@@ -105,12 +205,49 @@
     background-image: url("../../assets/axie.png");
 
     &:hover {
-        background-image: url("../../assets/axie-hover.png");  
+        background-image: url("../../assets/axie-hover.png"); 
+        
+        .hidden-text {
+            bottom: 30px;
+            animation: representation4 2s forwards;
+
+            @keyframes representation4 {
+                0% {
+                    opacity: 0;
+                    transform: translateX(70px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateX(110px);
+                }
+            }
+
+            @media (max-width: $ipad){
+                animation: representation8 2s forwards;
+
+                @keyframes representation8 {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(30px);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateY(60px);
+                    }
+                }
+            }
+        }
     }
 
     @media (max-width: $smaller-ipad){
         grid-column: 2;
         grid-row: 4;
+
+        &:hover {
+            .hidden-text {
+                animation: none;
+            }
+        }
     }
 }
 
@@ -120,21 +257,78 @@
     background-image: url("../../assets/quen.png");
 
     &:hover {
-        background-image: url("../../assets/quen-hover.png");  
+        background-image: url("../../assets/quen-hover.png");
+        
+        .hidden-text {
+            width: 150px;
+            bottom: 30px;
+            animation: representation5 2s forwards;
+
+            @keyframes representation5 {
+                0% {
+                    opacity: 0;
+                    transform: translateX(-70px);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateX(-120px);
+                }
+            }
+
+            @media (max-width: $ipad){
+                animation: representation9 2s forwards;
+
+                @keyframes representation9 {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(30px);
+                    }
+                    100% {
+                        opacity: 1;
+                        transform: translateY(60px);
+                    }
+                }
+            }
+        }
     }
 
     @media (max-width: $smaller-ipad){
         grid-column: 2;
         grid-row: 5;
+
+        &:hover {
+            .hidden-text {
+                width: 100px;
+                animation: none;
+            }
+        }
     }
 }
 
 .hidden-text {
     display: flex;
+    font-family: 'the-witcher';
+    text-transform: uppercase;
+    font-size: 1.8em;
+    letter-spacing: 0.1em;
+    background-color: gray;
+    background-image: linear-gradient(12deg, #88989b, #dee9e7);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
     position: absolute;
+    opacity: 0;
+
+    @media (max-width: $ipad){
+        font-size: 1.5em;
+    }
     
     @media (max-width: $smaller-ipad){
+        position: relative;
         justify-content: center;
-        bottom: -20px;
+        top: -20px;
+        font-size: 1.2em;
+        opacity: 1;
     }
 }
