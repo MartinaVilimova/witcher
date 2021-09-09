@@ -4,12 +4,13 @@ import './Styles.css';
 
 // Pages
 import Home from '../../pages/Home';
+import Characters from '../../pages/Characters';
 
 const Routes: React.FC = () => (
 	<Switch>
 		{/* <Route path="/quests" component={Quests} />
-		<Route path="/creatures" component={Creatures} />
-		<Route path="/characters" component={Characters} /> */}
+		<Route path="/creatures" component={Creatures} /> */}
+		<Route path="/characters" component={Characters} />
 		<Route path="/" component={Home} />
 	</Switch>
 )
