@@ -1,5 +1,9 @@
 @import "../../features/App/variable";
 
 .wrapper-creatures {
+    @include wrapper-page;
+}
+
+.list-creatures {
     @include wrapper-list;
 }

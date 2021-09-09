@@ -1,25 +1,25 @@
-import React  from 'react'
+import React, { useEffect, useState }  from 'react'
 import Header from '../../components/header'
-// import { getCharactersData, RandomCharacter } from '../../utils/getUserData'
+import Being from '../../components/itemOnTheList'
+import { getCharactersData, RandomCharacter } from '../../utils/getUserData'
 import './styles.css'
 
 
 const Characters: React.FC = () => {
-    // const [characterData, setCharacterData] = useState<RandomCharacter[]>([])
-    // const [click, setClick] = useState(false)
+    const [characterData, setCharacterData] = useState<RandomCharacter[]>([])
     
-    // useEffect(() => {
-    //     getCharactersData().then(setCharacterData)
-    // }, [click])
+    useEffect(() => {
+        getCharactersData().then((data) => setCharacterData(data))
+    }, [])
 
-    // const name = characterData.map(person => person.name)
     return (
         <div className="wrapper-characters">
             <Header title="postavy" />
-            {/* <button onClick={() => setClick(!click)}>klik</button>
-            <div>
-                {name}
-            </div> */}
+            <div className="list-characters">
+                {characterData.map((character) => (
+                    <Being key={character.id} name={character.name} photo={character.image} />
+                ))}
+            </div>
         </div>
     )
 }
