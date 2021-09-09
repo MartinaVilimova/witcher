@@ -36,13 +36,27 @@ $axie: #90ff7a;
     -moz-text-fill-color: transparent;
 }
 
-@mixin wrapper-list {
+//--repeat-wrapper-style----------------
+@mixin wrapper-page {
     display: grid;
     grid-template-columns: 1fr 4fr 1fr;
     grid-template-rows: 220px auto; 
-    box-shadow: 1px 5px 10px black;
 
     @media (max-width: $ipad) {
         grid-template-columns: 0.5fr 3fr 0.5fr;
     }
 }
+
+@mixin wrapper-list {
+    display: grid;
+    grid-column: 2;
+    grid-row: 2;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    justify-items: center;
+    gap: 15px;
+}
+
+//--size-photo-in-item--------------------
+$item-width: 200px;
+$item-height: 270px;
+$photo-height: 225px;

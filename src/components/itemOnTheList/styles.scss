@@ -1,0 +1,20 @@
+@import "../../features/App/variable";
+
+.wrapper-item {
+    width: $item-width;
+    height: $item-height;
+
+    img {
+        width: $item-width;
+        height: $photo-height;
+        object-fit: cover;
+    }
+
+    p {
+        display: flex;
+        width: 100%;
+        font-size: 1.2em;
+        padding: 7px 0;
+        @include center;
+    }
+}

@@ -1,5 +1,9 @@
 @import "../../features/App/variable";
 
 .wrapper-characters {
+    @include wrapper-page;
+}
+
+.list-characters {
     @include wrapper-list;
 }

@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'the-witcher';
+  src: url("https://dafonttop.com/wp-data/t/406/6406/file/thewitcher-4.ttf") format("woff"), url("https://dafonttop.com/wp-data/t/406/6406/file/thewitcher-4.ttf") format("opentype"), url("https://dafonttop.com/wp-data/t/406/6406/file/thewitcher-4.ttf") format("truetype");
+  src: url(../../fonts/thewitcher-4.ttf);
+}
+
+.wrapper-item {
+  width: 200px;
+  height: 270px;
+}
+
+.wrapper-item img {
+  width: 200px;
+  height: 225px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.wrapper-item p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  font-size: 1.2em;
+  padding: 7px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=styles.css.map */
