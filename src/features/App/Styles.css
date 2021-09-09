@@ -1,16 +1,16 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-weight: 300;
+  font-family: serif;
+  font-weight: bold;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: white;
+  color: #dee9e7;
   background-color: #181818;
 }
 

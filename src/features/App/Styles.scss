@@ -1,15 +1,15 @@
 * {
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
   }
   
-body {
+  body {
     margin: 0;
     padding: 0;
-    font-weight: 300;
+    font-family: serif;
+    font-weight: bold;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: white;
+    color: #dee9e7;
     background-color: #181818;
     
     h1, h2, h3, h4, h5, h6, p {
