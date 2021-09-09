@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'the-witcher';
+  src: url("https://dafonttop.com/wp-data/t/406/6406/file/thewitcher-4.ttf") format("woff"), url("https://dafonttop.com/wp-data/t/406/6406/file/thewitcher-4.ttf") format("opentype"), url("https://dafonttop.com/wp-data/t/406/6406/file/thewitcher-4.ttf") format("truetype");
+  src: url(../../fonts/thewitcher-4.ttf);
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media (max-width: 32rem) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+
+header img {
+  height: 150px;
+}
+
+@media (max-width: 65rem) {
+  header img {
+    height: 120px;
+  }
+}
+
+@media (max-width: 32rem) {
+  header img {
+    height: 100px;
+  }
+}
+
+header span {
+  text-transform: uppercase;
+  font-size: 5em;
+  padding-bottom: 40px;
+  font-family: 'the-witcher';
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background-color: gray;
+  background-image: linear-gradient(12deg, #88989b, #dee9e7);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+@media (max-width: 65rem) {
+  header span {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 32rem) {
+  header span {
+    font-size: 2em;
+    padding-bottom: 0;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

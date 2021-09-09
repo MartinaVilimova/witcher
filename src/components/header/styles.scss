@@ -1,0 +1,42 @@
+@import "../../features/App/variable";
+
+header {
+    display: flex;
+    grid-column: 2;
+    align-items: flex-end;
+    justify-content: space-around;
+
+    @media (max-width: $smaller-ipad) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    img {
+        height: 150px;
+
+        @media (max-width: $ipad) {
+            height: 120px;
+        }
+
+        @media (max-width: $smaller-ipad) {
+            height: 100px;
+        }
+    }
+
+    span {
+        text-transform: uppercase;
+        font-size: 5em;
+        padding-bottom: 40px;
+        @include witcher-font-metal;
+
+        @media (max-width: $ipad) {
+            font-size: 3em;
+        }
+
+        @media (max-width: $smaller-ipad) {
+            font-size: 2em;
+            padding-bottom: 0;
+        }
+    }
+}
