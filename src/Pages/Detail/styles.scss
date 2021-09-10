@@ -1,0 +1,14 @@
+@import "../../features/App/variable";
+
+.wrapper-detail {
+    @include wrapper-page;
+}
+
+.content-detail {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+
+}

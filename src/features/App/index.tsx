@@ -7,9 +7,11 @@ import Home from '../../pages/Home';
 import Characters from '../../pages/Characters';
 import Quests from '../../pages/Quests';
 import Creatures from '../../pages/Creatures';
+import Detail from '../../pages/Detail';
 
 const Routes: React.FC = () => (
 	<Switch>
+		<Route path="/detail" component={Detail} />
 		<Route path="/quests" component={Quests} />
 		<Route path="/creatures" component={Creatures} />
 		<Route path="/characters" component={Characters} />
