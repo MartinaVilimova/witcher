@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'the-witcher';
+  src: url("https://dafonttop.com/wp-data/t/406/6406/file/thewitcher-4.ttf") format("woff"), url("https://dafonttop.com/wp-data/t/406/6406/file/thewitcher-4.ttf") format("opentype"), url("https://dafonttop.com/wp-data/t/406/6406/file/thewitcher-4.ttf") format("truetype");
+  src: url(../../fonts/thewitcher-4.ttf);
+}
+
+.wrapper-detail {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr 1fr;
+      grid-template-columns: 1fr 4fr 1fr;
+  -ms-grid-rows: 270px auto;
+      grid-template-rows: 270px auto;
+}
+
+@media (max-width: 65rem) {
+  .wrapper-detail {
+    -ms-grid-columns: 0.5fr 3fr 0.5fr;
+        grid-template-columns: 0.5fr 3fr 0.5fr;
+  }
+}
+
+.content-detail {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+/*# sourceMappingURL=styles.css.map */
