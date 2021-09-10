@@ -1,7 +1,8 @@
 import React, { useEffect, useState }  from 'react'
 import Header from '../../components/header'
-import Being from '../../components/itemOnTheList'
+import ItemOfList, { TypeItems } from '../../components/itemOnTheList'
 import { getCharactersData, RandomCharacter } from '../../utils/getUserData'
+import sky from '../../assets/sky.png'
 import './styles.css'
 
 
@@ -14,10 +15,11 @@ const Characters: React.FC = () => {
 
     return (
         <div className="wrapper-characters">
+            <img className="sky" src={sky} alt="nebe" />
             <Header title="postavy" />
             <div className="list-characters">
                 {characterData.map((character) => (
-                    <Being key={character.id} name={character.name} photo={character.image} />
+                    <ItemOfList key={character.id} item={TypeItems.Person} name={character.name} photo={character.image} />
                 ))}
             </div>
         </div>

@@ -3,7 +3,7 @@
 header {
     display: flex;
     grid-column: 2;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-around;
 
     @media (max-width: $smaller-ipad) {
@@ -27,7 +27,6 @@ header {
     span {
         text-transform: uppercase;
         font-size: 5em;
-        padding-bottom: 40px;
         @include witcher-font-metal;
 
         @media (max-width: $ipad) {

@@ -16,12 +16,57 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  overflow: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 @media (max-width: 32rem) {
   .wrapper {
     height: 100%;
     padding-top: 30px;
+  }
+}
+
+.forest, .sky {
+  width: 110%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation: move 10s infinite;
+          animation: move 10s infinite;
+  z-index: -999;
+  position: fixed;
+}
+
+@-webkit-keyframes move {
+  0% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  50% {
+    -webkit-transform: skewX(2deg);
+            transform: skewX(2deg);
+  }
+  100% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
+  }
+  50% {
+    -webkit-transform: skewX(2deg);
+            transform: skewX(2deg);
+  }
+  100% {
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
   }
 }
 

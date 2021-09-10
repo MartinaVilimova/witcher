@@ -3,3 +3,7 @@
 .wrapper-quests {
     @include wrapper-page;
 }
+
+.list-quests {
+    @include wrapper-list;
+}
