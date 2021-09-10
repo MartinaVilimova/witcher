@@ -1,10 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import picture from '../../assets/home-picture.png'
+import nature from '../../assets/nature.png'
+import sky from '../../assets/sky.png'
 import './styles.css'
 
 const Home: React.FC = () => (
     <div className="wrapper">
+        <img className="forest" src={nature} alt="krajina" />
+        <img className="sky" src={sky} alt="nebe" />
         <main className="content">
             <img className="main-picture" src={picture} alt="witcher" />
             <Link to="/characters" className="yrden">

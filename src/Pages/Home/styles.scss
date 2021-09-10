@@ -5,10 +5,35 @@
     height: 100vh;
     width: 100%;
     @include center;
+    position: relative;
+    overflow: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
     @media (max-width: $smaller-ipad){
         height: 100%;
         padding-top: 30px;
+    }
+}
+
+.forest, .sky {
+    width: 110%;
+    height: 100%;
+    object-fit: cover;
+    animation: move 10s infinite;
+    z-index: -999;
+    position: fixed;
+
+    @keyframes move {
+        0% {
+            transform: skewX(0deg);
+        }
+        50% {
+            transform: skewX(2deg);
+        }
+        100% {
+            transform: skewX(0deg);
+        }
     }
 }
 

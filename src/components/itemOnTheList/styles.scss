@@ -1,20 +1,145 @@
 @import "../../features/App/variable";
 
 .wrapper-item {
+    display: flex;
+    flex-direction: column;
     width: $item-width;
     height: $item-height;
+    border-radius: 10px;
+
+    &:hover {
+        box-shadow: 5px 5px 8px black;
+        transform: translateY(-2px);
+    }
 
     img {
-        width: $item-width;
+        width: $photo-width;
         height: $photo-height;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    p {
+        width: $photo-width;
+        height: 40px;
+        font-size: 1.1em;
+        line-height: 40px;
+        text-align: center;
+        overflow: hidden;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
+
+.wrapper-person {
+    @extend .wrapper-item;
+    border: 1px solid #e5b73b;
+
+    img {
         object-fit: cover;
+        object-position: top;
+    }
+
+    p {
+        color: $text-primary;
+        background-color: rgba(216, 174, 57, 0.3);
+        box-shadow: 2px 3px 5px #7a621e inset,
+                    -2px -3px 5px #7a621e inset;
+    }
+}
+
+.wrapper-monster {
+    @extend .wrapper-item;
+
+    img {
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .line {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(12deg, $bg-black 0%, #e5b73b 65%, $bg-black 100%);
+    }
+
+    p {
+        color: #b49232;
+    }
+}
+
+.wrapper-quest {
+    display: flex;
+    @include center;
+    width: $item-width;
+    height: $item-height;
+    background: linear-gradient(12deg, rgba(211, 174, 12, 0.5) 0%, rgba(248, 239, 155, 0.5) 65%, rgba(219, 193, 18, 0.5) 100%);
+    border-radius: 12px;
+    position: relative;
+    
+    &:hover {
+        box-shadow: 5px 5px 8px black;
+        transform: translateY(-2px);
+    }
+    
+    .background-black {
+        display: flex;
+        flex-direction: column;
+        @include center;
+        width: 190px;
+        height: 260px;
+        border-radius: 10px;
+        background-color: rgb(63, 56, 38);
+    }
+
+    .level {
+        display: flex;
+        @include center;
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(12deg, rgb(211, 174, 12) 0%, rgb(248, 239, 155) 65%, rgb(219, 193, 18) 100%);
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        border-radius: 50%;
+
+        div {
+            display: flex;
+            @include center;
+            background-color: rgb(100, 89, 59);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            overflow: hidden;
+        }
+    }
+
+    .quests-type {
+        display: flex;
+        flex-direction: column;
+        @include center;
+        width: 180px;
+        height: 170px;
+        padding-top: 35px;
+
+        span {
+            font-size: 1em;
+            line-height: 25px;
+            text-align: center;
+        }
+
     }
 
     p {
         display: flex;
-        width: 100%;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+        height: 100px;
+        padding: 0 5px;
         font-size: 1.2em;
-        padding: 7px 0;
-        @include center;
+        line-height: 30px;
+        text-align: center;
+        overflow: hidden;
     }
 }
