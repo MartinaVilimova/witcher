@@ -16,7 +16,7 @@ const Creatures: React.FC = () => {
     return (
         <div className="wrapper-creatures">
             <img className="sky" src={sky} alt="nebe" />
-            <Header title="Monstra" />
+            <Header title="Creatures" />
             <div className="list-creatures">
                 {creaturesData.map((creature) => (
                     <ItemOfList key={creature.id} order={creature.id} item={TypeItems.Monster} name={creature.name} photo={creature.image} />
@@ -29,7 +29,7 @@ const Creatures: React.FC = () => {
         return (
             <div  className="wrapper-creatures">
                 <img className="sky" src={sky} alt="nebe" />
-                <Header title='Monstra' />
+                <Header title='Creatures' />
                 <section className="content-loading">
                     <div className="loading">
                         Loading . . .

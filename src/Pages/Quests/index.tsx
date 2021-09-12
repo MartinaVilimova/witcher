@@ -16,7 +16,7 @@ const Quests: React.FC = () => {
         return (
             <div className="wrapper-quests">
                 <img className="sky" src={sky} alt="nebe" />
-                <Header title="Qesty" />
+                <Header title="Quests" />
                 <div className="list-quests">
                     {questsData.map((quest) => (
                         <ItemOfList 

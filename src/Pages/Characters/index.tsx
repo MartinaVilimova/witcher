@@ -38,7 +38,7 @@ const Characters: React.FC = () => {
         return (
             <div className="wrapper-characters">
                 <img className="sky" src={sky} alt="nebe" />
-                <Header title="postavy" />
+                <Header title="Persons" />
                 <section className="filter-and-list">
                     <form className="filter">
                         <div>
@@ -53,7 +53,7 @@ const Characters: React.FC = () => {
                         <div>
                             <label htmlFor='sortOfCharacters'>Sort by:</label>
                             <select id='sortOfCharacters' name='sortOfCharacters' onChange={(selectedSorting) => setSorting(selectedSorting.target.value)}>
-                                <option value="id">Unikátní ID</option>
+                                <option value="id">Unigue ID</option>
                                 <option value="aplhabeth">A - Z</option>
                             </select>
                         </div>

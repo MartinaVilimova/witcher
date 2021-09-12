@@ -12,19 +12,19 @@ const Home: React.FC = () => (
         <main className="content">
             <img className="main-picture" src={picture} alt="witcher" />
             <Link to="/characters" className="yrden">
-                <span className="hidden-text">Postavy</span>
+                <span className="hidden-text">Characters</span>
             </Link>
             <Link to="/creatures" className="ard">
-                <span className="hidden-text">Monstra</span>
+                <span className="hidden-text">Creatures</span>
             </Link>
             <Link to="/quests" className="axie">
-                <span className="hidden-text">Qesty</span>
+                <span className="hidden-text">Quests</span>
             </Link>
             <a href="https://witcher.fandom.com/wiki/The_Witcher_3:_Wild_Hunt" className="quen">
                 <span className="hidden-text">TW3 Wiki</span>
             </a>
             <a href='https://martina-vilimova-portfolio.web.app/' className="igni">
-                <span className="hidden-text">Autor</span>
+                <span className="hidden-text">Author</span>
             </a>
         </main>
     </div>
