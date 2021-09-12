@@ -12,24 +12,39 @@ const Quests: React.FC = () => {
         getQuestsData().then((data) => setQuestsData(data))
     }, [])
 
-    return (
-        <div className="wrapper-quests">
-            <img className="sky" src={sky} alt="nebe" />
-            <Header title="Qesty" />
-            <div className="list-quests">
-                {questsData.map((quest) => (
-                    <ItemOfList 
-                    key={quest.id} 
-                    item={TypeItems.Quest} 
-                    name={quest.name} 
-                    type={quest.type}
-                    level={quest.level}
-                    region={quest.region}
-                    />
-                ))}
+    if(questsData.length !== 0){
+        return (
+            <div className="wrapper-quests">
+                <img className="sky" src={sky} alt="nebe" />
+                <Header title="Qesty" />
+                <div className="list-quests">
+                    {questsData.map((quest) => (
+                        <ItemOfList 
+                        key={quest.id} 
+                        item={TypeItems.Quest} 
+                        name={quest.name} 
+                        type={quest.type}
+                        level={quest.level}
+                        region={quest.region}
+                        />
+                    ))}
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
+    else {
+        return (
+            <div className="wrapper-quests">
+                <img className="sky" src={sky} alt="nebe" />
+                <Header title="Qesty" />
+                <section className="content-loading">
+                    <div className="loading">
+                        Loading . . .
+                    </div>
+                </section>
+            </div>
+        )
+    }
 }
 
 export default Quests
