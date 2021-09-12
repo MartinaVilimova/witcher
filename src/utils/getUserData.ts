@@ -6,7 +6,6 @@ export type RandomCharacter = {
     race: string
     profession: string
     nationality: string
-    firstAppearance: string
     image: string
 }
 
@@ -21,6 +20,12 @@ export const getCharactersData = async (): Promise<RandomCharacter[]> => {
         console.error(error)
         return []
     }
+}
+
+export const getCharacterDetail = async (id:number): Promise<RandomCharacter> => {
+        const data = await fetch(`${urlCharacters}/${id}`)
+        const jsonData = await data.json()
+        return jsonData[0]
 }
 
 export type RandomCreatures = {
@@ -48,14 +53,18 @@ export const getCreaturesData = async (): Promise<RandomCreatures[]> => {
     }
 }
 
+export const getCreaturesDetail = async (id:number): Promise<RandomCreatures> => {
+        const data = await fetch(`${urlCreatures}/${id}`)
+        const jsonData = await data.json()
+        return jsonData[0]
+}
+
 export type RandomQuests = {
     id: number
     name: string
     type: string
     region: string
     level: string
-    characters: string
-    location: string
 }
 
 export const urlQuests = 'http://witcher3api.com/api/quests'

@@ -8,10 +8,13 @@ import Characters from '../../pages/Characters';
 import Quests from '../../pages/Quests';
 import Creatures from '../../pages/Creatures';
 import Detail from '../../pages/Detail';
+import DetailMonster from '../../pages/DetailMonster';
 
 const Routes: React.FC = () => (
 	<Switch>
-		<Route path="/detail" component={Detail} />
+		<Route path="/detailMonster/:id" component={DetailMonster} />
+		<Route path="/detail/:id" component={Detail} />
+		{/* :id zápis parametru, který se bude měnit */}
 		<Route path="/quests" component={Quests} />
 		<Route path="/creatures" component={Creatures} />
 		<Route path="/characters" component={Characters} />
