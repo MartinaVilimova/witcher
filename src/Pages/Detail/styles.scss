@@ -8,7 +8,57 @@
     grid-column: 2;
     grid-row: 2;
     display: grid;
+    justify-items: center;
     width: 100%;
     grid-template-columns: 50% 50%;
 
+    @media (max-width: $ipad) {
+        grid-template-columns: 100%;
+    }
+
+    h1 {
+        color:rgb(216, 193, 45);
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    p {
+        color: rgb(180, 164, 83);
+        font-size: 1.2em;
+        padding-left: 30px;
+    }
+
+    span {
+        color: $text-primary;
+    }
+
+    article {
+        padding: 20px;
+        color: rgb(202, 199, 190);
+    }
+
+    .img-detail {
+        width: 90%;
+        border-width: 4px;
+        border-style: solid;
+        border-image: linear-gradient(to left, rgb(219, 193, 18), rgb(248, 239, 155), rgb(211, 174, 12), ) 90;
+    
+        @media (max-width: $ipad) {
+            grid-row: 2;
+        }
+    }
+}
+
+.content-loading {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+
+
+    .loading {
+        font-size: 1.7em;
+        color: rgb(180, 164, 83);
+    }
 }

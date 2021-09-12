@@ -15,19 +15,22 @@ type Props = {
     type?: string
     level?: string
     region?: string
+    order?: number
 }
 
-const ItemOfList: React.FC<Props> = ({name, photo, item, type, level, region}) => {
+const ItemOfList: React.FC<Props> = ({name, photo, item, type, level, region, order}) => {
     return (
         <>
         {item === TypeItems.Person && (
-            <Link to="/" className="wrapper-person">
+            <Link to={`/detail/${order}`} className="wrapper-person">
+            {/* order představuje měnící se parametr zobrazující pořadovou hodnotu pole, 
+            díky které se vyberou data jen jednoho objektu/hodnoty/osoby */}
                 <img src={photo} alt={name} />
                 <p>{name}</p>
             </Link>
         )}
         {item === TypeItems.Monster && (
-            <Link to="/" className="wrapper-monster">
+            <Link to={`/detailMonster/${order}`} className="wrapper-monster">
                 <img src={photo} alt={name} />
                 <div className="line"></div>
                 <p>{name}</p>
